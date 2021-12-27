@@ -1,0 +1,20 @@
+[user]
+	name = cheeseNA
+	email = kurocat2000@gmail.com
+[alias]
+    graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+	st = status
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[merge]
+	ff = false
+[pull]
+	ff = only
+[core]
+	quotepath = false
