@@ -8,8 +8,15 @@ set splitright
 set clipboard=unnamed
 set hls
 
+function! Cond(Cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-jp/vimdoc-ja'
+  Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+  Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 call plug#end()
 set helplang=ja,en
 
