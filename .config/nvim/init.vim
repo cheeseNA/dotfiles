@@ -7,6 +7,7 @@ set expandtab
 set splitright
 set clipboard=unnamed
 set hls
+set background=dark
 
 function! Cond(Cond, ...)
   let opts = get(a:000, 0, {})
@@ -21,3 +22,6 @@ call plug#end()
 set helplang=ja,en
 
 inoremap <silent> jj <ESC>
+
+syntax enable
+colorscheme iceberg
