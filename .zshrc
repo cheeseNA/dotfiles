@@ -21,6 +21,22 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+HISTFILE="${ZDOTDIR:-$HOME}/.zhistory"  # The path to the history file.
+
+zinit light zsh-users/zsh-syntax-highlighting
+
+zinit snippet PZTM::environment
+zinit snippet PZTM::terminal
+zinit snippet PZTM::editor
+zinit snippet PZTM::history
+zinit snippet PZTM::directory
+zinit snippet PZTM::spectrum
+zinit snippet PZTM::utility
+zinit snippet PZTM::completion
+zinit snippet PZTM::prompt
+
+zinit light zsh-users/zsh-autosuggestions
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -30,6 +46,10 @@ fi
 
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
+bindkey '^F' autosuggest-accept
+
+alias l='exa -lha'
+
 setopt nonomatch
 
 # autosuggestion color settings
@@ -37,6 +57,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
 
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# load fasd
+eval "$(fasd --init auto)"
 
 # fbr - checkout git branch
 fbr() {
