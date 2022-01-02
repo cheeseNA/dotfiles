@@ -5,6 +5,10 @@
 [alias]
     graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	st = status
+	unstage = reset HEAD --
+	cm = commit -m
+	rems = remote show
+	vv = branch -vv
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
