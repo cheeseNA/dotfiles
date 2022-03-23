@@ -8,6 +8,7 @@ set splitright
 set clipboard=unnamed
 set hls
 set background=dark
+set helplang=ja,en
 
 function! Cond(Cond, ...)
   let opts = get(a:000, 0, {})
@@ -18,8 +19,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vim-jp/vimdoc-ja'
   Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
   Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+  Plug 'machakann/vim-sandwich'
 call plug#end()
-set helplang=ja,en
+
+let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 
 inoremap <silent> jj <ESC>
 
