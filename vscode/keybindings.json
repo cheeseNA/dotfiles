@@ -23,29 +23,5 @@
         "key": "j",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "j"
-    },
-    {
-        "command": "vscode-neovim.send",
-        "key": "ctrl-h",
-        "when": "editorTextFocus",
-        "args": "<C-h>"
-    },
-    {
-        "command": "vscode-neovim.send",
-        "key": "ctrl-j",
-        "when": "editorTextFocus",
-        "args": "<C-j>"
-    },
-    {
-        "command": "vscode-neovim.send",
-        "key": "ctrl-k",
-        "when": "editorTextFocus",
-        "args": "<C-k>"
-    },
-    {
-        "command": "vscode-neovim.send",
-        "key": "ctrl-l",
-        "when": "editorTextFocus",
-        "args": "<C-l>"
     }
 ]

@@ -94,6 +94,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PATH=$HOME/.progate/bin:$PATH
-export PATH=~/Downloads/研究:$PATH
