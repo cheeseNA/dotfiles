@@ -22,9 +22,29 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'machakann/vim-sandwich'
 call plug#end()
 
+" easymotion mapping
+map <Leader> <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-overwin-f)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 
 inoremap <silent> jj <ESC>
 
 syntax enable
 colorscheme iceberg
+
+" key maps for cursor moving
+nnoremap <C-h> <Left>
+vnoremap <C-h> <Left>
+inoremap <C-h> <Left>
+nnoremap <C-j> <Down>
+vnoremap <C-j> <Down>
+inoremap <C-j> <Down>
+nnoremap <C-l> <Right>
+vnoremap <C-l> <Right>
+inoremap <C-l> <Right>
+nnoremap <C-k> <Up>
+vnoremap <C-k> <Up>
+inoremap <C-k> <Up>
