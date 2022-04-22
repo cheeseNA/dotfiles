@@ -55,6 +55,11 @@ setopt nonomatch
 # autosuggestion color settings
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080"
 
+# trash settings
+if type trash > /dev/null 2>&1; then
+  alias rm='trash -F'
+fi
+
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
