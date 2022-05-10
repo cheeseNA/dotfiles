@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
   Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
   Plug 'machakann/vim-sandwich'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " easymotion mapping
@@ -33,7 +34,7 @@ let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 inoremap <silent> jj <ESC>
 
 syntax enable
-colorscheme iceberg
+colorscheme dracula
 
 " key maps for cursor moving
 nnoremap <C-h> <Left>
