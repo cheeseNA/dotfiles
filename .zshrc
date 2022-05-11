@@ -61,7 +61,7 @@ if type trash > /dev/null 2>&1; then
 fi
 
 # fzf settings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 
 # load fasd
 eval "$(fasd --init auto)"
